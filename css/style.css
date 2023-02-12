@@ -1,0 +1,1003 @@
+@charset "UTF-8";
+/* 文字コードの指定 */
+
+/* Webフォントの指定 */
+@font-face {
+  font-family: "NotoSansJP-Black";
+  src: url("../fonts/NotoSansJP-Black.otf") format("otf");
+}
+
+@font-face {
+  font-family: "NotoSansJP-Bold";
+  src: url("../fonts/NotoSansJP-Bold.otf") format("otf");
+}
+
+@font-face {
+  font-family: "NotoSansJP-Medium";
+  src: url("../fonts/NotoSansJP-Medium.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Poppins-ExtraBold";
+  src: url("../fonts/Poppins-ExtraBold.ttf") format("ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #454545;
+}
+
+.flex {
+  display: flex;
+}
+
+/*メインビジュアルここから*/
+.mainvisual {
+  background-image: url(../img/main_pc.jpg);
+  background-size: cover;
+  height: 50.07vw;
+}
+
+.container {
+  width: 84.9vw;
+  margin: auto;
+}
+
+.mainvisual .container {
+  padding-top: 7.32vw;
+  padding-left: 44.5vw;
+}
+
+.main-content {
+  width: 42.8vw;
+  height: 37.3vw;
+}
+
+.main-content img {
+  width: 33vw;
+  margin-top: 4.5vw;
+  margin-bottom: 2.5vw;
+  margin-left: 3.7vw;
+}
+
+h2 {
+  font-size: 3.3vw;
+  text-shadow: 3px 0 #fff;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.line2 {
+  margin-top: 3vw;
+}
+
+.underline {
+  background: linear-gradient(transparent 71%, #f940bc 60%);
+  padding-bottom: 0.4vw;
+}
+
+/*SP版表示-メインビジュアル*/
+@media (max-width: 767px) {
+  .mainvisual {
+    background-image: url(../img/main_sp.jpg);
+    background-size: cover;
+    height: 111.2vw;
+  }
+
+  .mainvisual .container {
+    padding-top: 24vw;
+    padding-left: 37vw;
+    width: 100vw;
+  }
+
+  .main-content {
+    width: 63.47vw;
+  }
+
+  .main-content img {
+    width: 58.13vw;
+    margin-top: 11vw;
+    margin-bottom: 9.5vw;
+    margin-left: 1.7vw;
+  }
+
+  h2 {
+    font-size: 5.1vw;
+    letter-spacing: 0;
+  }
+
+  .line2 {
+    margin-top: 3vw;
+  }
+
+  .underline {
+    background: linear-gradient(transparent 71%, #f940bc 60%);
+    padding-bottom: 0.4vw;
+  }
+}
+
+/*オンライン予約*/
+.book {
+  background-color: #3fbcfa;
+  width: 100vw;
+  height: 14.64vw;
+}
+
+.book .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14.64vw;
+  column-gap: 4.39vw;
+}
+
+.book-text {
+  font-size: 2.78vw;
+  color: #fff;
+  line-height: calc(59/38);
+  text-align: center;
+  text-shadow: 6px 0px 10px #868b8d;
+}
+
+.book a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdfa3e;
+  width: 20.79vw;
+  height: 8.05vw;
+  border-radius: 55px;
+  font-size: 2.78vw;
+  font-weight: 900;
+  box-shadow: 0 10px 10px #868b8d;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  color: #454545;
+}
+
+.book .hoverflash::before {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 300%;
+  top: 50%;
+  position: absolute;
+  background-color: #fff;
+  transform: translate(-500%, -50%) rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+
+.book .hoverflash:hover::before {
+  transform: translate(500%, -50%) rotate(-45deg);
+}
+
+/*SP版表示-オンライン予約*/
+@media (max-width: 767px) {
+  .book {
+    background-color: #3fbcfa;
+    width: 100vw;
+    height: 32.3vw;
+  }
+
+  .book .flex {
+    display: block;
+    margin: auto;
+    height: 32.3vw;
+    padding-top: 5.5vw;
+  }
+
+  .book-text {
+    font-size: 4.26vw;
+    text-shadow: 6px 0px 10px #868b8d;
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+
+  .book a {
+    margin: auto;
+    width: 35.73vw;
+    height: 10.93vw;
+    font-size: 4vw;
+  }
+}
+
+/*ホワイトニング*/
+.whitening {
+  height: 49.78vw;
+  position: relative;
+}
+
+.bg_stripe {
+  background: repeating-linear-gradient(45deg, #fff, #fff 15px, #f5f5f5 0, #f5f5f5 30px);
+}
+
+.whitening .container {
+  padding-top: 4.5vw;
+}
+
+.whitening-text {
+  font-size: 2.26vw;
+  margin-bottom: 3.5vw;
+  position: relative;
+  z-index: 2;
+  font-weight: 900;
+}
+
+.whitening ul {
+  list-style-type: none;
+}
+
+.whitening li {
+  width: 56.3vw;
+  height: 7.9vw;
+  border: 7px solid #707070;
+  background-color: #ffffff;
+  border-radius: 50px;
+  font-size: 2.19vw;
+  text-align: center;
+  padding-top: 1.5vw;
+  margin-top: 1.83vw;
+  position: relative;
+  z-index: 5;
+  font-weight: 900;
+}
+
+.whitening h2 {
+  font-size: 2.7vw;
+  position: relative;
+  z-index: 10;
+  margin-top: 3vw;
+}
+
+.whitening img {
+  position: absolute;
+  top: 8vw;
+  left: 57vw;
+  width: 52vw;
+  z-index: 1;
+}
+
+/*SP版表示-ホワイトニング*/
+@media (max-width: 767px) {
+  .whitening {
+    height: 114vw;
+  }
+
+  .whitening .container {
+    padding-top: 16.6vw;
+  }
+
+  .whitening-text {
+    font-size: 3.73vw;
+    margin-bottom: 15.53vw;
+    padding-left: 4vw;
+  }
+
+  .whitening li {
+    width: 77.06vw;
+    height: 12.8vw;
+    border: 2px solid #707070;
+    background-color: #ffffff;
+    border-radius: 24px;
+    font-size: 3.73vw;
+    padding-top: 3.5vw;
+    margin-top: 4vw;
+    margin-left: 4vw;
+  }
+
+  .whitening h2 {
+    font-size: 4vw;
+    margin-top: 12vw;
+    width: 100vw;
+    margin-left: -4vw;
+    letter-spacing: -0.03em;
+  }
+
+  .whitening img {
+    top: -4vw;
+    left: 52vw;
+    width: 57vw;
+  }
+}
+
+/*3つのポイント*/
+.three-points {
+  height: 69.32vw;
+  background-color: #3fbcfa;
+}
+
+.three-points .container {
+  padding-top: 4.39vw;
+}
+
+.three-points .title {
+  width: 69.39vw;
+  height: 8.49vw;
+  background-color: #fff;
+  color: #3fbcfa;
+  font-weight: 900;
+  font-size: 2.92vw;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 4.39vw;
+  text-align: center;
+  padding-top: 2vw;
+}
+
+.no-pc {
+  display: none;
+}
+
+.flex.point1,
+.flex.point2,
+.flex.point3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3vw;
+  color: #fff;
+}
+
+.flex.point1 {
+  column-gap: 4vw;
+}
+
+.number {
+  font-family: "Poppins", sans-serif;
+  font-size: 5.12vw;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.three-points .text {
+  width: 52.7vw;
+  border-left: 8px solid #fff;
+  padding-left: 1.9vw;
+  padding-bottom: 0.5vw;
+}
+
+.three-points .subtitle {
+  font-family: "NotoSansJP-Black";
+  font-size: 2.19vw;
+  font-weight: 900;
+  margin-top: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.three-points .description {
+  font-family: "NotoSansJP-Medium";
+  font-size: 1.31vw;
+  line-height: 1.5;
+}
+
+.three-points li {
+  list-style-type: none;
+  margin-top: 4.39vw;
+}
+
+/*SP版表示-3つのポイント*/
+@media (max-width: 767px) {
+  .three-points {
+    height: 190.4vw;
+  }
+
+  .three-points .container {
+    padding-top: 6.66vw;
+    width: 92.8vw;
+    margin: auto;
+  }
+
+  .three-points .title {
+    width: 92.8vw;
+    height: 14.9vw;
+    font-size: 4.8vw;
+    border-radius: 5px;
+    margin-bottom: 9.33vw;
+    padding-top: 2vw;
+    line-height: 1.22;
+  }
+
+  .no-sp {
+    display: none;
+  }
+
+  .no-pc {
+    display: block;
+  }
+
+  .flex.point1,
+  .flex.point2,
+  .flex.point3 {
+    display: block;
+    width: 92.8vw;
+    margin-bottom: 9.5vw;
+  }
+
+  .number {
+    font-size: 10.66vw;
+    border-bottom: 1px solid #fff;
+    width: 21.6vw;
+    text-align: center;
+    margin: auto;
+    line-height: 0.9;
+  }
+
+  .three-points .text {
+    width: 88.8vw;
+    border-left: none;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin: auto;
+  }
+
+  .three-points .subtitle {
+    font-size: 4vw;
+    margin-top: 6.5vw;
+    margin-bottom: 3vw;
+    text-align: center;
+  }
+
+  .three-points .description {
+    font-size: 3.73vw;
+    line-height: calc(16/14);
+  }
+
+  .three-points li {
+    margin-top: 0;
+  }
+}
+
+/*ホワイトニングQ＆A*/
+.question {
+  height: 131.91vw;
+}
+
+.question .container {
+  padding-top: 4.39vw;
+}
+
+.question .title {
+  width: 69.39vw;
+  height: 8.49vw;
+  background-color: #f940bc;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.92vw;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 4.39vw;
+  text-align: center;
+  padding-top: 2vw;
+}
+
+.question .flex {
+  display: flex;
+  width: 84.9vw;
+  height: 34.55vw;
+  padding: 5.63vw 4.9vw 5.63vw 2.48vw;
+  background-color: #fff;
+  margin-top: 2.19vw;
+}
+
+.question img {
+  width: 31.1vw;
+}
+
+.qa {
+  padding-left: 3.07vw;
+}
+
+.q {
+  font-size: 2.19vw;
+  font-weight: 700;
+}
+
+.Q,
+.A {
+  font-family: "Poppins";
+  font-size: 4.39vw;
+  font-weight: 900;
+  margin-right: 2.2vw;
+}
+
+.a {
+  font-size: 1.31vw;
+  line-height: 1.5;
+  color: #f940bc;
+}
+
+.Q {
+  margin-right: 3vw;
+}
+
+.A {
+  color: #f940bc;
+  margin-right: 3.2vw;
+  padding-left: 0.3vw;
+}
+
+.flex-text {
+  display: flex;
+  align-items: center;
+  margin-top: 2vw;
+}
+
+.answer {
+  margin-top: 4.5vw;
+}
+
+/*SP版表示-ホワイトニングQ&A*/
+@media (max-width: 767px) {
+  .question {
+    height: 297.8vw;
+  }
+
+  .yakekuso {
+    width: 92.8vw;
+    margin: auto;
+    padding: 0 3.2vw;
+  }
+
+  .question .container {
+    padding-top: 6.66vw;
+    width: 92.8vw;
+    margin: auto;
+  }
+
+  .question .title {
+    width: 92.8vw;
+    height: 14.9vw;
+    font-weight: 900;
+    font-size: 4.8vw;
+    border-radius: 5px;
+    margin-bottom: 4vw;
+    padding-top: 1.5vw;
+    line-height: calc(22/18);
+  }
+
+  .question .flex {
+    display: block;
+    width: 86.9vw;
+    height: fit-content;
+    padding: 2.66vw 4.53vw 3.73vw 4.53vw;
+    margin-top: 0vw;
+    margin-bottom: 6vw;
+  }
+
+  .question img {
+    width: 54.9vw;
+  }
+
+  .img-center {
+    text-align: center;
+  }
+
+  .qa {
+    padding-left: 0vw;
+  }
+
+  .q {
+    font-size: 4vw;
+    font-weight: 700;
+  }
+
+  .Q,
+  .A {
+    font-size: 4.8vw;
+    font-weight: 900;
+    margin-right: 3.2vw;
+  }
+
+  .a {
+    font-size: 3.73vw;
+    line-height: calc(16/14);
+    width: 68vw;
+  }
+
+  .Q {
+    margin-right: 3vw;
+  }
+
+  .A {
+    margin-right: 3.2vw;
+    padding-left: 0.3vw;
+  }
+
+  .flex-text {
+    margin-top: 1vw;
+  }
+
+  .answer {
+    margin-top: 2.8vw;
+  }
+}
+
+/*SP版表示-オンライン予約2*/
+@media (max-width: 767px) {
+  .book.online2 {
+    height: 40vw;
+  }
+
+  .online2 .container {
+    width: 92vw;
+  }
+}
+
+/*選ばれる理由*/
+.bg_dot {
+  background-image: radial-gradient(#f5f5f5 20%, transparent 20%), radial-gradient(#f5f5f5 20%, transparent 20%);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-repeat: repeat;
+}
+
+.reason {
+  height: 128vw;
+}
+
+.reason .container {
+  padding-top: 4.39vw;
+}
+
+.reason .title {
+  width: 69.39vw;
+  height: 8.49vw;
+  background-color: #f940bc;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.92vw;
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  padding-top: 2vw;
+}
+
+.reason .content {
+  width: 84.9vw;
+  height: 103.95vw;
+  background-color: #fff;
+  border: 7px solid #6e6e6e;
+  border-radius: 15px;
+  padding: 5.5vw 3vw 5.12vw 3vw;
+  margin-top: 4.39vw;
+}
+
+.reason .subtitle {
+  width: 30.89vw;
+  background: linear-gradient(transparent 80%, #f940bc 80%);
+  padding-bottom: 1.5vw;
+  font-size: 2.19vw;
+  font-weight: 700;
+  line-height: 1;
+  margin: auto;
+}
+
+.reason img {
+  width: 31vw;
+}
+
+.reason .flex {
+  display: flex;
+  column-gap: 2vw;
+}
+
+.reason .description {
+  font-size: 1.31vw;
+  line-height: calc(27/18);
+  padding-top: 2vw;
+}
+
+.reason p {
+  margin-top: 1.8vw;
+}
+
+.reason .bold {
+  font-weight: bold;
+}
+
+.no2.reverse {
+  flex-direction: row-reverse;
+}
+
+.no2 .description {
+  padding-top: 3vw;
+}
+
+.no1 {
+  margin-top: 5vw;
+}
+
+.no2,
+.no3 {
+  margin-top: 7vw;
+}
+
+/*SP版表示-選ばれる理由*/
+@media (max-width: 767px) {
+  .bg_dot {
+    background-image: radial-gradient(#f5f5f5 20%, transparent 20%), radial-gradient(#f5f5f5 20%, transparent 20%);
+    background-size: 15px 15px;
+    background-position: 0 0, 15px 15px;
+    background-repeat: repeat;
+  }
+
+  .reason {
+    height: 337.86vw;
+  }
+
+  .reason .container {
+    padding-top: 6.66vw;
+    width: 93vw;
+    margin: auto;
+  }
+
+  .reason .title {
+    width: 92.8vw;
+    height: 14.93vw;
+    font-size: 4.8vw;
+    border-radius: 5px;
+    padding-top: 1vw;
+    line-height: calc(22/18);
+    margin-bottom: 4vw;
+  }
+
+  .reason .content {
+    width: 89.6vw;
+    height: 299.4vw;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    padding: 7vw 5vw 5.12vw 7vw;
+    margin: auto
+  }
+
+  .reason .subtitle {
+    width: 61.33vw;
+    background: linear-gradient(transparent 90%, #f940bc 90%);
+    padding-bottom: 1.5vw;
+    font-size: 4.26vw;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .img-center {
+    text-align: none;
+    padding: 0 10vw;
+  }
+
+  .reason img {
+    width: 54.9vw;
+  }
+
+  .reason .flex {
+    display: block;
+  }
+
+  .reason .description {
+    font-size: 3.73vw;
+    line-height: calc(16/14);
+    padding-top: 0vw;
+  }
+
+  .reason p {
+    margin-top: 2.93vw;
+  }
+
+  .no2 .description {
+    padding-top: 0vw;
+  }
+
+  .no1 {
+    margin-top: 5vw;
+  }
+
+  .no2,
+  .no3 {
+    margin-top: 7.5vw;
+  }
+}
+
+/*よくあるご質問*/
+.FAQ {
+  padding-bottom: 5vw;
+}
+
+.FAQ .container {
+  width: 84.9vw;
+  padding-top: 4.39vw;
+}
+
+.FAQ .title {
+  width: 33.38vw;
+  height: 8.49vw;
+  background-color: #3fbcfa;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.92vw;
+  border-radius: 20px;
+  margin: auto;
+  text-align: center;
+  padding-top: 2vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.accordion-question {
+  width: 84.9vw;
+  height: 5.49vw;
+  border-bottom: 2px solid #454545;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 1.31vw;
+  padding: 0 2.5vw;
+  margin-top: 2.92vw;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq1st {
+  margin-top: 4.3vw;
+}
+
+.opacity:hover{
+  opacity: 0.5;
+}
+
+
+.ac-question,
+.ac-answer {
+  margin-right: 1vw;
+  letter-spacing: 0.5em;
+}
+
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-answer {
+  width: 84.9vw;
+  background-color: #fff;
+  display: flex;
+  font-size: 1.31vw;
+  line-height: calc(27/18);
+  padding: 2vw 7.5vw 2vw 2.5vw;
+}
+
+/*プラス→マイナス*/
+
+.switch{
+  display: block;
+}
+
+.switch::before,
+.switch::after {
+    content: '';
+    display: block;
+    width: 3vw;
+    height: 0.2vw;
+    background-color:#454545;
+    position: absolute;
+    right:1%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* 2本の横棒のうち一本は縦棒にする */
+.switch::after {
+    /* 横棒を縦にするために90℃回転させる */
+    transform: translateY(-50%) rotate(90deg);
+    /* プラスからマイナスへの切り替えをゆっくり行いアニメーションさせる */
+    transition: 0.5s;
+    background-color:#454545;
+  }
+  
+  /*
+  プラスがクリックされたら縦棒を横にしてマイナスにする疑似要素
+  jQueryで付け外しを行う
+  */
+  .active::after {
+    transform: rotate(0);
+    transition: 0.5s;
+  }
+
+
+/*SP版表示-よくあるご質問*/
+@media (max-width: 767px) {
+  .FAQ {
+    padding-bottom: 12.8vw;
+  }
+
+  .FAQ .container {
+    width: 92.8vw;
+    padding-top: 6.66vw;
+  }
+
+  .FAQ .title {
+    width: 47.73vw;
+    height: 12.26vw;
+    font-size: 4.8vw;
+    border-radius: 5px;
+    padding-top: 2vw;
+  }
+
+  .accordion-question {
+    width: 88vw;
+    height: auto;
+    border-bottom: 1px solid #454545;
+    font-size: 3.73vw;
+    padding: 0 1vw;
+    margin-top: 2.93vw;
+  }
+
+  .faq1st {
+    margin-top: 4vw;
+  }
+
+  .ac-question,
+  .ac-answer {
+    margin-right: 1vw;
+    letter-spacing: 0.5em;
+  }
+
+  .icon {
+    font-size: 5.5vw;
+    margin-left: auto;
+  }
+
+  .accordion-answer {
+    width: 88vw;
+    font-size: 3.73vw;
+    line-height: calc(16/14);
+    padding: 2vw 7.5vw 2vw 2.5vw;
+  }
+}
+
+
+/*フッター*/
+.footer-flex {
+  height: 16.17vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 18vw;
+}
+
+.footer-flex img {
+  width: 27.89vw;
+}
+
+.footer-flex p {
+  font-size: 1.17vw;
+}
+
+/*SP版-フッター*/
+@media (max-width: 767px) {
+  .footer-flex {
+  height: 38.66vw;
+  display: block;
+  padding-top: 13.6vw;
+}
+
+.footer-flex img {
+  width: 50.1vw;
+}
+
+.footer-flex .img-center{
+  margin: auto;
+}
+
+.footer-flex p {
+  font-size: 3.2vw;
+  text-align: center;
+  color: #777777;
+}
+}
